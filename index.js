@@ -1,8 +1,10 @@
 'use strict'
 
+const getTimer = require('./src/factories/timer')
+
 
 function comparePerformance (...testSuite) {
-  return
+  console.log(getTimer())
 }
 
 comparePerformance(

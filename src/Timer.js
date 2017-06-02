@@ -3,9 +3,8 @@
 class Timer {
 
   constructor () {
-    this._start
-    this._end
-    this._time
+    this._start = 0
+    this._end = 0
   }
 
   start () {

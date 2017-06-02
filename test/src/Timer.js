@@ -5,8 +5,13 @@ const expect = chai.expect
 
 const Timer = require('../../src/Timer')
 const timer = new Timer()
+
 const expectedMethods = ['constructor', 'start', 'end', '_getTime']
 const instanceMethods = Object.getOwnPropertyNames(Timer.prototype)
+
+const expectedProps = [ '_start', '_end' ]
+const instanceProps = Object.getOwnPropertyNames(timer)
+console.log(instanceProps)
 
 module.exports = function makeTest () {
 
@@ -32,6 +37,16 @@ module.exports = function makeTest () {
       it(`The methods should to be functions`,() => {
           expectedMethods.forEach((method) => expect(timer[method]).to.be.a('function'))
           expect(expectedMethods).to.eql(['constructor', 'start', 'end', '_getTime'])
+      })
+    })
+
+    describe('Timer properties tests',() => {
+      it(`The instance of Timer should to be props: ${expectedProps}`,() => {
+          expect(expectedProps).to.eql(instanceProps)
+      })
+
+      it(`The properties should to be a numbers`,() => {
+          instanceProps.forEach((prop) => expect(timer[prop]).to.be.a('number'))
       })
     })
 
