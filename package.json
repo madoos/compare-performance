@@ -5,9 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run lint && npm run cover:unit",
+    "test:demon": "./bin/test/unit-demon",
     "test:unit": "./bin/test/unit",
     "test:int": "./bin/test/int",
     "cover": "./bin/test/cover",
+    "cover:demon": "./bin/test/cover-demon",
     "cover:unit": "./bin/test/cover-unit",
     "lint": "./bin/test/linter",
     "serve:coverage": "./bin/serve/coverage",
@@ -32,15 +34,19 @@
   "homepage": "https://github.com/madoos/compare-performance.git#readme",
   "devDependencies": {
     "chai": "^3.5.0",
+    "http-server": "^0.9.0",
     "istanbul": "^0.4.5",
     "mocha": "^3.2.0",
-    "standard": "^8.6.0",
-    "http-server": "^0.9.0"
+    "nodemon": "^1.11.0",
+    "standard": "^8.6.0"
   },
   "standard": {
     "env": {
       "node": true,
       "mocha": true
     }
+  },
+  "dependencies": {
+    "madoos-type": "0.0.8"
   }
 }
