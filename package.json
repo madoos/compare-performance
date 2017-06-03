@@ -47,6 +47,8 @@
     }
   },
   "dependencies": {
-    "madoos-type": "0.0.8"
+    "cli-table": "^0.3.1",
+    "madoos-type": "0.0.8",
+    "pretty-ms": "^2.1.0"
   }
 }

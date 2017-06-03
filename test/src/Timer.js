@@ -6,12 +6,11 @@ const expect = chai.expect
 const Timer = require('../../src/Timer')
 const timer = new Timer()
 
-const expectedMethods = ['constructor', 'start', 'end', '_getTime']
+const expectedMethods = ['constructor', 'start', 'end', '_getTime', 'endPretty']
 const instanceMethods = Object.getOwnPropertyNames(Timer.prototype)
 
 const expectedProps = [ '_start', '_end' ]
 const instanceProps = Object.getOwnPropertyNames(timer)
-console.log(instanceProps)
 
 module.exports = function makeTest () {
 
@@ -36,7 +35,7 @@ module.exports = function makeTest () {
 
       it(`The methods should to be functions`,() => {
           expectedMethods.forEach((method) => expect(timer[method]).to.be.a('function'))
-          expect(expectedMethods).to.eql(['constructor', 'start', 'end', '_getTime'])
+          expect(expectedMethods).to.eql(instanceMethods)
       })
     })
 
@@ -62,6 +61,12 @@ module.exports = function makeTest () {
             expect(elapsedTime >= 0).to.equal(true)
             done()
           }, 500)
+      })
+
+      it('To execute timer.start(), timer.endPretty() should return a human string',() => {
+          timer.start()
+          const prettyTime = timer.endPretty()
+          expect(prettyTime).to.be.a('string')
       })
     })
 

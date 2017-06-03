@@ -1,5 +1,7 @@
 'use strict'
 
+const prettyMs = require('pretty-ms')
+
 class Timer {
 
   constructor () {
@@ -7,18 +9,23 @@ class Timer {
     this._end = 0
   }
 
+
   start () {
     this._start = new Date().getTime()
     return this._start
   }
 
   end () {
-    this._end = new Date().getTime()
     return this._getTime()
   }
 
   _getTime () {
+    this._end = new Date().getTime()
     return this._end - this._start
+  }
+
+  endPretty () {
+    return prettyMs(this._getTime())
   }
 }
 
