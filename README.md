@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/madoos/compare-performance.svg?branch=develop)](https://travis-ci.org/madoos/compare-performance)
+
 # madoos-compare-performance
 
 _Gets information about execution speed of code._
