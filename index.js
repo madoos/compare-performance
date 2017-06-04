@@ -28,5 +28,3 @@ function comparePerformance (testSuite, opt = {}) {
 }
 
 module.exports = handleInputExceptions(comparePerformance, dataStructure)
-
-

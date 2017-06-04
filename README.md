@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/madoos/compare-performance.svg?branch=develop)](https://travis-ci.org/madoos/compare-performance)
+
 # madoos-compare-performance
 
 _Gets information about execution speed of code._
@@ -130,8 +132,6 @@ comparePerformance([
 |--------|----------|-----------------------------------------------------------|
 | name   | String   | Function to execute                                       |
 | source | Function | Arguments to be passed each time the function is executed |
-|        |          |                                                           |
-
 
 ## Options
 
