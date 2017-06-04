@@ -38,7 +38,7 @@ module.exports = function makeTest () {
 
     describe('Method: getPerformance(name, source, iterations, args)',() => {
 
-      const expectedPops = ['name', 'iterations', 'time', 'memory', 'source', 'args']
+      const expectedPops = ['name', 'iterations', 'time', 'memory', 'source', 'args', 'humanTime', 'humanMemory']
 
       it(`getPerformance("test", R.identity) should iterate one time and return an object with props: a ${expectedPops}`,() => {
          const performance = core.getPerformance("test", R.identity)

@@ -12,14 +12,13 @@ const dataStructure = exceptionHandler.testSuiteDataStructure
 
 
 function comparePerformance (testSuite, opt = {}) {
-  const iterations = opt.iterations
-  const args = opt.args
-  const performance = testSuite.map((test) => getPerformance(test.name, test.source, args, iterations))
+  const performance = testSuite.map((test) => getPerformance(test.name, test.source, opt.args, opt.iterations))
 
   showReport(
     ['Suite', 'Iterations', 'Execution Time', 'Memory Usage (Experimental)'],
-    performance.map(values(['name', 'iterations', 'time', 'memory']))
+    performance.map(values(['name', 'iterations', 'humanTime', 'humanMemory']))
   )
+  console.log(performance)
   return performance
 }
 
