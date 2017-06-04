@@ -1,3 +1,5 @@
+[![NPM](https://nodei.co/npm/madoos-compare-performance.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/madoos-compare-performance/)
+
 [![Build Status](https://travis-ci.org/madoos/compare-performance.svg?branch=develop)](https://travis-ci.org/madoos/compare-performance)
 
 # madoos-compare-performance
