@@ -1,6 +1,0 @@
-# !bin/bash
-
-./node_modules/.bin/nodemon \
---ext js --watch ./ \
---delay 1 \
---exec ./bin/test/unit

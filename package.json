@@ -5,15 +5,19 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run lint && npm run cover:unit",
-    "test:demon": "./bin/test/unit-demon",
     "test:unit": "./bin/test/unit",
     "test:int": "./bin/test/int",
     "cover": "./bin/test/cover",
-    "cover:demon": "./bin/test/cover-demon",
     "cover:unit": "./bin/test/cover-unit",
     "lint": "./bin/test/linter",
     "serve:coverage": "./bin/serve/coverage",
-    "serve:linter": "./bin/serve/linter"
+    "serve:linter": "./bin/serve/linter",
+    "exec:demon": "./bin/demon/exec",
+    "demon:unit": "npm run exec:demon ./bin/test/unit",
+    "demon:cover": "npm run exec:demon ./bin/test/cover",
+    "demon:lint": "npm run exec:demon ./bin/test/linter",
+    "demon:serve:linter": "npm run exec:demon ./bin/serve/linter",
+    "demon:serve:coverage": "npm run exec:demon ./bin/serve/coverage"
   },
   "repository": {
     "type": "git",
@@ -48,6 +52,8 @@
   },
   "dependencies": {
     "cli-table": "^0.3.1",
+    "deasync": "^0.1.9",
+    "filesize": "^3.5.10",
     "madoos-type": "0.0.8",
     "pretty-ms": "^2.1.0"
   }
