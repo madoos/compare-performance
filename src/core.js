@@ -23,7 +23,7 @@ function getPerformance (name, codeSource, iterations = 1, args = []) {
   const source = iterations > 1 ? makeLoop(codeSource, iterations, args) : codeSource
   const time = measureWith(instance(Timer), 'start', source, 'endPretty')
   const memory = measureWith(instance(MemoryMeter), 'start', source, 'endPretty')
-  return { name, iterations, time, memory, codeSource, args }
+  return { name, iterations, time, memory, source, args }
 }
 
 function showReport (head, rows) {

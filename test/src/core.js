@@ -36,14 +36,14 @@ module.exports = function makeTest () {
       })
     })
 
-    describe('Method: getPerformance(name, codeSource, iterations, args)',() => {
+    describe('Method: getPerformance(name, source, iterations, args)',() => {
 
-      const expectedPops = ['name', 'iterations', 'time', 'memory', 'codeSource', 'args']
+      const expectedPops = ['name', 'iterations', 'time', 'memory', 'source', 'args']
 
       it(`getPerformance("test", R.identity) should iterate one time and return an object with props: a ${expectedPops}`,() => {
          const performance = core.getPerformance("test", R.identity)
          expect(performance).to.have.all.keys(expectedPops)
-         expect(performance.codeSource).to.be.a('function')
+         expect(performance.source).to.be.a('function')
          expect(performance.iterations).to.be.equal(1)
          expect(performance.args).to.be.empty;
       })
@@ -52,7 +52,7 @@ module.exports = function makeTest () {
          const performance = core.getPerformance("test", R.identity, 5, ['a1', 'd'])
          console.log(performance)
          expect(performance).to.have.all.keys(expectedPops)
-         expect(performance.codeSource).to.be.a('function')
+         expect(performance.source).to.be.a('function')
          expect(performance.iterations).to.be.equal(5)
          expect(performance.args).to.not.be.empty;
       })
@@ -60,8 +60,8 @@ module.exports = function makeTest () {
 
 
 
-    describe('Method: showReport(title, head, rows)',() => {
-      it('showReport(title, head, rows) should show in console the report',() => {
+    describe('Method: showReport(head, rows)',() => {
+      it('showReport(head, rows) should show in console the report',() => {
 
           const output = stdout.inspectSync(() => core.showReport(['a','b','c'], [[1, 2, 3],[4, 5, 6]]))
           expect(output).to.be.a('array')
