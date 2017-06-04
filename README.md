@@ -32,15 +32,15 @@ function forTest () {
 }
 
 comparePerformance([
-  {name: 'while (million iteration)', source: whileTest},
-  {name: 'for (million iteration)', source: forTest}
+  {name: 'while (million iterations)', source: whileTest},
+  {name: 'for (million iterations)', source: forTest}
 ])
 
 /*
 => Show report in console and return description
 [
   {
-    name: 'while (million iteration)',
+    name: 'while (million iterations)',
     iterations: 1,
     time: 2,
     memory: 2352,
@@ -50,7 +50,7 @@ comparePerformance([
     humanMemory: '2.35 kB'
   },
   {
-    name: 'for (million iteration)',
+    name: 'for (million iterations)',
     iterations: 1,
     time: 5,
     memory: 1000,
@@ -63,6 +63,10 @@ comparePerformance([
 */
 
 ```
+In console:
+
+![example 1](https://raw.githubusercontent.com/madoos/compare-performance/develop/resources/example1.png)
+
 Example whit automatic iteration
 
 ```javascript
@@ -123,6 +127,9 @@ comparePerformance([
 */
 
 ```
+In console:
+
+![example 1](https://raw.githubusercontent.com/madoos/compare-performance/develop/resources/example1.png)
 
 ## Function interface
 
