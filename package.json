@@ -53,7 +53,6 @@
   },
   "dependencies": {
     "cli-table": "^0.3.1",
-    "deasync": "^0.1.9",
     "has-keys": "^0.1.0",
     "madoos-functional-implementations": "0.0.1",
     "madoos-type": "0.0.8",

@@ -15,12 +15,30 @@ module.exports = {
   showReport
 }
 
+/**
+ *
+ *
+ * @param {Object} subject
+ * @param {String} startCommand
+ * @param {Function} code
+ * @param {String} endCommand
+ * @returns {MixValue}
+ */
 function measureWith (subject, startCommand, code, endCommand) {
   subject[startCommand]()
   code()
   return subject[endCommand]()
 }
 
+/**
+ *
+ *
+ * @param {String} name
+ * @param {Function} codeSource
+ * @param {Array} args
+ * @param {Number} iterations
+ * @returns {Object}
+ */
 function getPerformance (name, codeSource, args = [], iterations = 1) {
   const source = iterations > 1 ? makeLoop(codeSource, iterations, args) : codeSource
   const time = measureWith(instance(Timer), 'start', source, 'end')
@@ -30,6 +48,12 @@ function getPerformance (name, codeSource, args = [], iterations = 1) {
   return { name, iterations, time, memory, source, args, humanTime, humanMemory }
 }
 
+/**
+ *
+ *
+ * @param {Array<String>} head
+ * @param {Array<Array>} rows
+ */
 function showReport (head, rows) {
   const table = new Table({head})
   table.push(...rows)

@@ -9,7 +9,13 @@ const showReport = core.showReport
 const getPerformance = core.getPerformance
 const dataStructure = exceptionHandler.testSuiteDataStructure
 
-
+/**
+ *
+ *
+ * @param {Array<Object>} testSuite
+ * @param {<Object>} opt
+ * @returns {Array<Object>}
+ */
 function comparePerformance (testSuite, opt = {}) {
   const performance = testSuite.map((test) => getPerformance(test.name, test.source, opt.args, opt.iterations))
 
@@ -22,3 +28,5 @@ function comparePerformance (testSuite, opt = {}) {
 }
 
 module.exports = handleInputExceptions(comparePerformance, dataStructure)
+
+
