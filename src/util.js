@@ -1,14 +1,23 @@
 'use strict'
 
-function makeSync (asyncFn, context) {
-  return function (...args) {
-    let syncData
-    asyncFn.call(context || this, ...args, (data) => { syncData = data })
-    while(syncData === undefined)require('deasync').sleep(100)
-    return syncData
+const R = require('ramda')
+
+module.exports = {
+  instance,
+  makeLoop,
+  values: R.curry(values)
+}
+
+function instance (Constructor, ...args) {
+  return new Constructor(...args)
+}
+
+function makeLoop (fn, times, ...args) {
+  return function () {
+    for (let i = 0; i <= times; i++) fn(...args)
   }
 }
 
-module.exports = {
-  makeSync
+function values (keys, obj) {
+  return keys.map((key) => obj[key])
 }

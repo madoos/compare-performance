@@ -3,10 +3,14 @@
 const chai = require('chai')
 const expect = chai.expect
 
+const comparePerformance = require('../')
+
 const timerTest = require('./src/Timer')
-const factoriesTest = require('./src/factories')
+const memoryMeterTest = require('./src/MemoryMeter')
+const utilTest = require('./src/util')
 
 describe('src tests', function () {
   timerTest()
-  describe('Factories test', () =>  factoriesTest())
+  memoryMeterTest()
+  /utilTest()
 })
