@@ -19,7 +19,7 @@ function measureWith (subject, startCommand, code, endCommand) {
   return subject[endCommand]()
 }
 
-function getPerformance (name, codeSource, iterations = 1, args = []) {
+function getPerformance (name, codeSource, args = [], iterations = 1) {
   const source = iterations > 1 ? makeLoop(codeSource, iterations, args) : codeSource
   const time = measureWith(instance(Timer), 'start', source, 'endPretty')
   const memory = measureWith(instance(MemoryMeter), 'start', source, 'endPretty')

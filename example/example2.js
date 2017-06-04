@@ -28,3 +28,4 @@ comparePerformance([
   {name: 'fibonacci Recursive', source: fibonacciRecursive},
   {name: 'fibonacci', source: fibonacci}
 ], options)
+

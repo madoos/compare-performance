@@ -20,7 +20,7 @@ class MemoryMeter {
 
   _calculateMemoryUsed () {
     this._end = this._memoryUsed()
-    return this._end - this._start
+    return Math.abs(this._end - this._start)
   }
 
   endPretty () {

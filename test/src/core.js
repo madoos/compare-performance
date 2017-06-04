@@ -49,8 +49,7 @@ module.exports = function makeTest () {
       })
 
       it(`getPerformance("test", R.identity, 5, 'a1') should iterate one time and return an object with props: a ${expectedPops}`,() => {
-         const performance = core.getPerformance("test", R.identity, 5, ['a1', 'd'])
-         console.log(performance)
+         const performance = core.getPerformance("test", R.identity, ['a1', 'd'], 5)
          expect(performance).to.have.all.keys(expectedPops)
          expect(performance.source).to.be.a('function')
          expect(performance.iterations).to.be.equal(5)
