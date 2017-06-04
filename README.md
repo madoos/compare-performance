@@ -129,7 +129,7 @@ comparePerformance([
 ```
 In console:
 
-![example 1](https://raw.githubusercontent.com/madoos/compare-performance/develop/resources/example1.png)
+![example 1](https://raw.githubusercontent.com/madoos/compare-performance/develop/resources/example2.png)
 
 ## Function interface
 
