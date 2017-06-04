@@ -10,7 +10,7 @@ const makeLoop = util.makeLoop
 module.exports = {
   measureWith,
   getPerformance,
-  showPerformance
+  showReport
 }
 
 function measureWith (subject, startCommand, code, endCommand) {
@@ -26,7 +26,7 @@ function getPerformance (name, codeSource, iterations = 1, args = []) {
   return { name, iterations, time, memory, codeSource, args }
 }
 
-function showPerformance (head, rows) {
+function showReport (head, rows) {
   const table = new Table({head})
   table.push(...rows)
   console.log(table.toString())

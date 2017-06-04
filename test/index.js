@@ -8,9 +8,11 @@ const comparePerformance = require('../')
 const timerTest = require('./src/Timer')
 const memoryMeterTest = require('./src/MemoryMeter')
 const utilTest = require('./src/util')
+const coreTest = require('./src/core')
 
 describe('src tests', function () {
   timerTest()
   memoryMeterTest()
-  /utilTest()
+  utilTest()
+  coreTest()
 })
