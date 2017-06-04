@@ -130,8 +130,6 @@ comparePerformance([
 |--------|----------|-----------------------------------------------------------|
 | name   | String   | Function to execute                                       |
 | source | Function | Arguments to be passed each time the function is executed |
-|        |          |                                                           |
-
 
 ## Options
 
