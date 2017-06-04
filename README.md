@@ -122,24 +122,23 @@ comparePerformance([
 
 ## Function interface
 
-  comparePerformance([testDefinition<Object>, ...], options<Object(Optional)>)
+`comparePerformance([testDefinition<Object>, ...], options<Object(Optional)>)`
 
 ## Test Definition
 
-| key    | type     | description                                               |   |   |
-|--------|----------|-----------------------------------------------------------|---|---|
-| name   | String   | Function to execute                                       |   |   |
-| source | Function | Arguments to be passed each time the function is executed |   |   |
-|        |          |                                                           |   |   |
+| key    | type     | description                                               |
+|--------|----------|-----------------------------------------------------------|
+| name   | String   | Function to execute                                       |
+| source | Function | Arguments to be passed each time the function is executed |
+|        |          |                                                           |
 
 
 ## Options
 
-| key       | type   | description                                               |   |   |
-|-----------|--------|-----------------------------------------------------------|---|---|
-| iterations | Number | Number of iterations applied to the function                      |   |   |
-| args      | Array  | Arguments to be passed each time the function is executed |   |   |
-|           |        |                                                           |   |   |
+| key        | type   | description                                               |
+|------------|--------|-----------------------------------------------------------|
+| iterations | Number | Number of iterations applied to the function              |
+| args       | Array  | Arguments to be passed each time the function is executed |
 
 ## npm scripts
 
