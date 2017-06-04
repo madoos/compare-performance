@@ -1,6 +1,6 @@
 {
   "name": "madoos-compare-performance",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Gets information about execution speed of code.",
   "main": "index.js",
   "scripts": {
