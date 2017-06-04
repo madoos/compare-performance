@@ -14,21 +14,21 @@ const instanceProps = Object.getOwnPropertyNames(memory)
 
 module.exports = function makeTest () {
 
-  describe('MemoryMeter class test',() => {
+  describe('MemoryMeter class',() => {
 
-    describe('MemoryMeter constructor test',() => {
+    describe('MemoryMeter constructor',() => {
       it('MemoryMeter to be a function',() => {
           expect(MemoryMeter).to.be.a('function')
       })
     })
 
-    describe('MemoryMeter instance test',() => {
+    describe('MemoryMeter instance',() => {
       it('To execute new MemoryMeter() should to be a object',() => {
           expect(memory).to.be.a('object')
       })
     })
 
-    describe('MemoryMeter method tests',() => {
+    describe('MemoryMeter methods',() => {
       it(`To execute new MemoryMeter() should to be methods: ${expectedMethods}`,() => {
           expect(instanceMethods).to.eql(expectedMethods)
       })
@@ -49,7 +49,7 @@ module.exports = function makeTest () {
       })
     })
 
-    describe('MemoryMeter execution method tests',() => {
+    describe('MemoryMeter execution methods',() => {
       it('To execute memory.start(), timer.end() should return positive number',(done) => {
           memory.start()
           let elapsedTime = memory.end()

@@ -14,21 +14,21 @@ const instanceProps = Object.getOwnPropertyNames(timer)
 
 module.exports = function makeTest () {
 
-  describe('Timer class test',() => {
+  describe('Timer class',() => {
 
-    describe('Timer constructor test',() => {
+    describe('Timer constructor',() => {
       it('Timer to be a function',() => {
           expect(Timer).to.be.a('function')
       })
     })
 
-    describe('Timer instance test',() => {
+    describe('Timer instance',() => {
       it('To execute new Timer() should to be a object',() => {
           expect(timer).to.be.a('object')
       })
     })
 
-    describe('Timer method tests',() => {
+    describe('Timer methods',() => {
       it(`To execute new Timer() should to be methods: ${expectedMethods}`,() => {
           expect(instanceMethods).to.eql(expectedMethods)
       })
