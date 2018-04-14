@@ -1,6 +1,4 @@
-[![NPM](https://nodei.co/npm/madoos-compare-performance.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/madoos-compare-performance/)
-
-[![Build Status](https://travis-ci.org/madoos/compare-performance.svg?branch=develop)](https://travis-ci.org/madoos/compare-performance)
+[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
 
 # madoos-compare-performance
 
@@ -14,17 +12,17 @@ To install:
 
 In your project:
 
-``` javascript
-const comparePerformance = require('madoos-compare-performance')
+```javascript
+const comparePerformance = require("madoos-compare-performance")
 
-function whileTest () {
+function whileTest() {
   let i = 1000000 //million
   let c = 0
   while (i--) c++
   return c
 }
 
-function forTest () {
+function forTest() {
   let i = 1000000 //million
   let c = 0
   for (let j = 0; j <= i; j++) c++
@@ -32,8 +30,8 @@ function forTest () {
 }
 
 comparePerformance([
-  {name: 'while (million iterations)', source: whileTest},
-  {name: 'for (million iterations)', source: forTest}
+  { name: "while (million iterations)", source: whileTest },
+  { name: "for (million iterations)", source: forTest }
 ])
 
 /*
@@ -61,8 +59,8 @@ comparePerformance([
   }
 ]
 */
-
 ```
+
 In console:
 
 ![example 1](https://raw.githubusercontent.com/madoos/compare-performance/develop/resources/example1.png)
@@ -70,10 +68,9 @@ In console:
 Example whit automatic iteration
 
 ```javascript
+const comparePerformance = require("madoos-compare-performance")
 
-const comparePerformance = require('madoos-compare-performance')
-
-function fibonacci (n) {
+function fibonacci(n) {
   let a = 0
   let b = 1
   let f = 1
@@ -84,10 +81,12 @@ function fibonacci (n) {
     b = f
   }
   return f
-};
+}
 
-function fibonacciRecursive (num) {
-  return (num <= 1) ? 1 : fibonacciRecursive(num - 1) + fibonacciRecursive(num - 2)
+function fibonacciRecursive(num) {
+  return num <= 1
+    ? 1
+    : fibonacciRecursive(num - 1) + fibonacciRecursive(num - 2)
 }
 
 const options = {
@@ -95,10 +94,13 @@ const options = {
   args: [20]
 }
 
-comparePerformance([
-  {name: 'fibonacci Recursive', source: fibonacciRecursive},
-  {name: 'fibonacci', source: fibonacci}
-], options)
+comparePerformance(
+  [
+    { name: "fibonacci Recursive", source: fibonacciRecursive },
+    { name: "fibonacci", source: fibonacci }
+  ],
+  options
+)
 
 /*
 => Show report in console and return description
@@ -125,8 +127,8 @@ comparePerformance([
   }
 ]
 */
-
 ```
+
 In console:
 
 ![example 1](https://raw.githubusercontent.com/madoos/compare-performance/develop/resources/example2.png)
@@ -138,24 +140,33 @@ In console:
 ## Test Definition
 
 | key    | type     | description                                               |
-|--------|----------|-----------------------------------------------------------|
+| ------ | -------- | --------------------------------------------------------- |
 | name   | String   | Function to execute                                       |
 | source | Function | Arguments to be passed each time the function is executed |
 
 ## Options
 
 | key        | type   | description                                               |
-|------------|--------|-----------------------------------------------------------|
+| ---------- | ------ | --------------------------------------------------------- |
 | iterations | Number | Number of iterations applied to the function              |
 | args       | Array  | Arguments to be passed each time the function is executed |
 
 ## npm scripts
 
-  * `tes`
-  * `cover`
-  * `lint`
-  * `serve:coverage`
-  * `serve:linter`
-  * `demon:cover`
-  * `demon:lint`
-  * `demon:serve:coverage`
+* `tes`
+* `cover`
+* `lint`
+* `serve:coverage`
+* `serve:linter`
+* `demon:cover`
+* `demon:lint`
+* `demon:serve:coverage`
+
+[npm-image]: https://badge.fury.io/js/madoos-compare-performance.svg
+[npm-url]: https://npmjs.org/package/madoos-compare-performance
+[travis-image]: https://travis-ci.org/madoos/madoos-compare-performance.svg?branch=develop
+[travis-url]: https://travis-ci.org/madoos/madoos-compare-performance
+[daviddm-image]: https://david-dm.org/madoos/madoos-compare-performance.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/madoos/madoos-compare-performance
+[coveralls-image]: https://coveralls.io/repos/madoos/madoos-compare-performance/badge.svg
+[coveralls-url]: https://coveralls.io/r/madoos/madoos-compare-performance
