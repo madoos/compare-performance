@@ -164,9 +164,9 @@ In console:
 
 [npm-image]: https://badge.fury.io/js/madoos-compare-performance.svg
 [npm-url]: https://npmjs.org/package/madoos-compare-performance
-[travis-image]: https://travis-ci.org/madoos/madoos-compare-performance.svg?branch=develop
-[travis-url]: https://travis-ci.org/madoos/madoos-compare-performance
-[daviddm-image]: https://david-dm.org/madoos/madoos-compare-performance.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/madoos/madoos-compare-performance
-[coveralls-image]: https://coveralls.io/repos/madoos/madoos-compare-performance/badge.svg
-[coveralls-url]: https://coveralls.io/r/madoos/madoos-compare-performance
+[travis-image]: https://travis-ci.org/madoos/compare-performance.svg?branch=develop
+[travis-url]: https://travis-ci.org/compare-performance
+[daviddm-image]: https://david-dm.org/madoos/compare-performance.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/madoos/compare-performance
+[coveralls-image]: https://coveralls.io/repos/madoos/compare-performance/badge.svg
+[coveralls-url]: https://coveralls.io/r/madoos/compare-performance
